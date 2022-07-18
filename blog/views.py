@@ -59,3 +59,6 @@ def name_post(request,name_post):
 
 def number_post(request,number_post):
     return render(request, 'blog/detail_by_number.html', {'number_post': number_post})
+
+def beautiful_table(request):
+    return render(request, 'blog/beautiful_table.html')
