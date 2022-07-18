@@ -4,15 +4,15 @@ from django.urls import reverse
 
 def rectangle_area(request,width,height):
     area = width*height
-    return HttpResponse(f'Площадь прямоугольника размером {width}x{height} равна {area}')
+    return render(request, 'geometry/rectangle.html', {'area': area, 'width': width, 'height': height})
 
 def square_area(request,width):
     area = width**2
-    return HttpResponse(f'Площадь квадрата размером {width}x{width} равна {area}')
+    return render(request, 'geometry/square.html', {'area': area, 'width': width})
 
 def circle_area(request,radius):
     area = 3.14 * radius ** 2
-    return HttpResponse(f'Площадь круга с радиусом {radius} равна {area}')
+    return render(request, 'geometry/circle.html', {'area': area, 'radius': radius})
 
 def get_rectangle_area(request,width,height):
     redirect_url = reverse('rectangle_url', args=(width,height))
