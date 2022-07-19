@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'week_days',
     'geometry',
     'horoscope',
+    'bookshop',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
